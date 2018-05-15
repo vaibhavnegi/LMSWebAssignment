@@ -25,8 +25,8 @@ app.use('/teacher', routes.teacher);
 app.use('/subject', routes.subject);
 
 
-app.listen(5555, () => {
+app.listen(3000, () => {
     db.sync();
-    console.log("started");
+    console.log("started at 3000");
 })
 
