@@ -9,9 +9,10 @@ declare global {
     };
 }
 
-const db = new Sequelize('LearnMgmtSol', 'root', 'root', {
-    host: 'localhost',
-    dialect: 'mysql',
+const db = new Sequelize('LearnMgmtSol', '', '', {
+   // host: 'localhost',
+    dialect: 'sqlite',
+    storage: './storage.db'
 })
 
 const courseAttr: SequelizeAttributes<CourseI> = {
