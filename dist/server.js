@@ -12,6 +12,8 @@ const subject_1 = __importDefault(require("./routes/subject"));
 const student_1 = __importDefault(require("./routes/student"));
 const teacher_1 = __importDefault(require("./routes/teacher"));
 const app = express_1.default();
+const cors = require('cors');
+app.use(cors());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use('/', express_1.default.static(path_1.default.join(__dirname, '../public')));
