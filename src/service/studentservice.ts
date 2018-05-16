@@ -1,10 +1,6 @@
 import { BatchI, CourseI, TeacherI, StudentI, SubjectI, LectureI } from '../model/entityI';
-
 import { Course, Teacher, Subject, Student, Batch } from '../model/enitity';
-
 import { getCoursesbyId } from './courseService';
-
-
 export async function addStudent(name: string, batch: any): Promise<BatchI | StudentI | null> {
 
     return new Promise<StudentI | null>((resolve, reject) => {
