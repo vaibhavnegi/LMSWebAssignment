@@ -23,7 +23,7 @@ app.use('/course', routes.course);
 app.use('/student', routes.student);
 app.use('/teacher', routes.teacher);
 app.use('/subject', routes.subject);
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     enitity_1.db.sync();
     console.log("started at 3000");
 });
