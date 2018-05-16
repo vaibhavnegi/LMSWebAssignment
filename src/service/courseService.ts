@@ -11,6 +11,14 @@ export async function getCourses(): Promise<CourseI[]|null> {
     })
 }
 
+export async function getallbatches(): Promise<BatchI[] | null> {
+    return new Promise<BatchI[] | null>((resolve, reject) => {
+        Batch.findAll().then(result => {
+            resolve(result);
+        })
+    })
+}
+
 export async function getBatchStudents(cid:number,bid:number): Promise<BatchI[]|null>{
     return new Promise<BatchI[]|null>((resolve,reject)=>{
         Batch.findAll({
