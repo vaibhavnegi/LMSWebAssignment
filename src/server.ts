@@ -20,7 +20,7 @@ app.use('/', express.static(path.join(__dirname, '../public')));
 
 app.get("/", (req: Request, res: Response) => {
     res.sendFile('index.html');
-}); 
+});
 
 const routes = {
     course: courseRoute,
