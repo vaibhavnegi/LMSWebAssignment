@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { addStudent, getStudents, getStudentbyId, getStudentBatches, addStudentToBatch, deleteUserById, updateStudent } from '../service/studentService';
+import { addStudent, getStudents, getStudentbyId, getStudentBatches, addStudentToBatch, deleteUserById, updateStudent } from '../service/studentservice';
 import { TeacherI, SubjectI, StudentI, BatchI } from '../model/entityI';
 import { getBatchById } from '../service/courseService'
 
