@@ -1,6 +1,7 @@
 //Vaibhav Negi WebEvaluation Day-1 Assignment...
 
 import express from 'express'
+import { Request, Response } from 'express'
 import path from 'path'
 import { db } from "./model/enitity"
 import courseRoute from "./routes/course"
@@ -11,6 +12,12 @@ import teacherRoute from './routes/teacher'
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
+
+app.use('/', express.static(path.join(__dirname, '../public')));
+
+app.get("/", (req: Request, res: Response) => {
+    res.sendFile('index.html');
+}); 
 
 const routes = {
     course: courseRoute,
