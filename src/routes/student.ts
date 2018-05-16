@@ -66,7 +66,7 @@ route.delete('/:id', (req: Request, res: Response) => {
                 success: true,
                 id: result
             });
-        }).catch(err => {
+        }).catch((err:any) => {
             res.status(400);
         })
     } catch (err) {
@@ -80,12 +80,12 @@ route.put('/:id', (req: Request, res: Response) => {
     let id = req.params.id;
     let name = req.body.name;
 
-    updateStudent(id, name).then((result) => {
+    updateStudent(id, name).then((result:any) => {
         console.log(result)
         if (result == 0)
             throw Error("Update failed No Student found for id" + id);
         res.status(200).json(result);
-    }).catch(err => {
+    }).catch((err:any) => {
         res.status(400);
     })
 

@@ -57,7 +57,7 @@ route.delete('/:id', (req, res) => {
                 success: true,
                 id: result
             });
-        }).catch(err => {
+        }).catch((err) => {
             res.status(400);
         });
     }
@@ -73,7 +73,7 @@ route.put('/:id', (req, res) => {
         if (result == 0)
             throw Error("Update failed No Student found for id" + id);
         res.status(200).json(result);
-    }).catch(err => {
+    }).catch((err) => {
         res.status(400);
     });
 });

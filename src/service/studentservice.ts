@@ -11,8 +11,6 @@ export async function addStudent(name: string, batch: any): Promise<BatchI | Stu
     })
 }
 
-
-
 export async function getStudents(): Promise<StudentI[] | null> {
     return new Promise<StudentI[] | null>((resolve, reject) => {
         Student.findAll().then(result => {
